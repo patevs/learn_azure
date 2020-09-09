@@ -1,16 +1,46 @@
-# Node Template
+# Learn Azure
 
-> A Repository Template for `NodeJS` Projects.
+> Links, resources, and code related to my learning of `Microsoft Azure` cloud services.
+
+---
+
+[Microsoft Azure](https://azure.microsoft.com/en-us/) is a cloud computing service for building,
+testing, deploying, and managing applications and services through Microsoft-managed data centers.
+It provides software as a service (SaaS), platform as a service (PaaS) and infrastructure as a service (IaaS).
 
 ---
 
 ## Links & Resources
 
-* [`commitlint`](https://github.com/conventional-changelog/commitlint) Lint commit messages.
-  * [`commitlint-config-gitmoji`](https://github.com/arvinxx/commitlint-config-gitmoji) Commitlint config enforcing gitmoji rules.
-  * [Rules](https://github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md)
-* [`husky`](https://github.com/typicode/husky) Git hooks made easy.
-* [`np`](https://github.com/sindresorhus/np) A better npm publish.
+* [Azure Documentation](https://docs.microsoft.com/en-us/azure/?product=featured)
+
+[](.)
+
+* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
+  * [Tips & Tricks](https://docs.microsoft.com/en-us/cli/azure/use-cli-effectively)
+* [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/)
+  * [Installation](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
+
+[](.)
+
+* [App Services](https://docs.microsoft.com/en-us/azure/app-service/overview)
+  * [Documentation](https://docs.microsoft.com/en-us/azure/app-service/)
+  * [NodeJS Quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?pivots=platform-windows)
+
+[](.)
+
+* [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/?view=azure-devops)
+  * [CLI Setup](https://docs.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-cmdline?view=azure-devops)
+
+[](.)
+
+* [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)
+  * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops)
+
+[](.)
+
+* [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
+  * [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
 
 ---
 
@@ -18,8 +48,6 @@
 
 ```md
 .
-├── bin
-│   └── checkUpdates.js  # Check for outdated npm modules
 ├── .editorconfig        # Editor configuration
 ├── .gitignore           # Git ignore rules
 ├── .np-config.json      # NPM publish (np) configuration
