@@ -25,6 +25,14 @@
   * [CLI Samples](https://docs.microsoft.com/en-us/azure/app-service/samples-cli)
   * [NodeJS Quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?pivots=platform-windows)
 
+## Azure Active Directory
+
+Azure Active Directory (Azure AD) is a multi-tenant, cloud-based identity and access management service.
+
+* [Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/)
+  * [B2C Documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
+  * [NodeJS Example](https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi)
+
 ## Azure Functions
 
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
