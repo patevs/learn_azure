@@ -16,6 +16,20 @@ It provides software as a service (SaaS), platform as a service (PaaS) and infra
 
 ---
 
+## VM vs. Container vs. Serverless
+
+![VM vs. Container vs. Serverless](./media/1-vm-vs-container-vs-serverless.png)
+
+## IaaS vs. PaaS vs. SaaS
+
+![Services Comparison](./media/2-services-layer-diagram.png)
+
+## Azure Services Overview
+
+![Azure Services Overview](./media/3-azure-services.png)
+
+---
+
 ## Project Structure
 
 ```md
