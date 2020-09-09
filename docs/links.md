@@ -22,6 +22,7 @@
 
 * [App Services](https://docs.microsoft.com/en-us/azure/app-service/overview)
   * [Documentation](https://docs.microsoft.com/en-us/azure/app-service/)
+  * [CLI Samples](https://docs.microsoft.com/en-us/azure/app-service/samples-cli)
   * [NodeJS Quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?pivots=platform-windows)
 
 ## Azure Functions
