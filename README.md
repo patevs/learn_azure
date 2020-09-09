@@ -12,6 +12,11 @@ It provides software as a service (SaaS), platform as a service (PaaS) and infra
 
 ## Links & Resources
 
+* [`awesome-azure`](https://github.com/kristofferandreasen/awesome-azure)
+* [`awesome-azure-learning`](https://github.com/ddneves/awesome-azure-learning)
+
+[](.)
+
 * [Azure Documentation](https://docs.microsoft.com/en-us/azure/?product=featured)
 
 [](.)
