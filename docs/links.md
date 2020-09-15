@@ -38,6 +38,12 @@ Azure Active Directory (Azure AD) is a multi-tenant, cloud-based identity and ac
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
   * [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
 
+## Azure Virtual Machines
+
+* [Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/)
+  * [CLI Quick Start](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli)
+  * [Manage VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm)
+
 ---
 
 ## Azure DevOps
