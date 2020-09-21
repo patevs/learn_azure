@@ -73,5 +73,6 @@ Azure Database for MySQL is a relational database service powered by the MySQL c
 
 * [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
   * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines)
+  * [YAML Schema Reference](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema)
 
 ---
