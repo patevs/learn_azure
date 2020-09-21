@@ -33,6 +33,14 @@ Azure Active Directory (Azure AD) is a multi-tenant, cloud-based identity and ac
   * [B2C Documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
   * [NodeJS Example](https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi)
 
+## Azure Container Registry
+
+Azure Container Registry is a managed, private Docker registry service based on the open-source Docker Registry 2.0.
+
+* [Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
+  * [Documentation](https://docs.microsoft.com/en-us/azure/container-registry/)
+  * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli)
+
 ## Azure Functions
 
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
