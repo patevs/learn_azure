@@ -41,6 +41,14 @@ Azure Container Registry is a managed, private Docker registry service based on 
   * [Documentation](https://docs.microsoft.com/en-us/azure/container-registry/)
   * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli)
 
+## Azure Database for MySQL
+
+Azure Database for MySQL is a relational database service powered by the MySQL community edition.
+
+* [Database for MySQL](https://docs.microsoft.com/en-us/azure/mysql/overview)
+  * [Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
+  * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/mysql/quickstart-create-mysql-server-database-using-azure-cli)
+
 ## Azure Functions
 
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
