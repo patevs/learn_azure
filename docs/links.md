@@ -66,12 +66,12 @@ Azure Database for MySQL is a relational database service powered by the MySQL c
 
 ### Azure Repos
 
-* [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/?view=azure-devops)
-  * [CLI Setup](https://docs.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-cmdline?view=azure-devops)
+* [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos)
+  * [CLI Setup](https://docs.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-cmdline)
 
 ### Azure Pipelines
 
-* [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops)
+* [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
+  * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines)
 
 ---
