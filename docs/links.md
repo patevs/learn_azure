@@ -14,6 +14,7 @@
 ## Azure CLI
 
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
+  * [Documentation](https://github.com/MicrosoftDocs/azure-docs-cli)
   * [Tips & Tricks](https://docs.microsoft.com/en-us/cli/azure/use-cli-effectively)
 * [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/)
   * [Installation](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
