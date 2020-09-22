@@ -13,6 +13,7 @@ It provides software as a service (SaaS), platform as a service (PaaS) and infra
 ## Documentation
 
 * [Links and Resources](./docs/links.md)
+* [Tools and Utilities](./docs/tools.md)
 
 ---
 
@@ -35,7 +36,8 @@ It provides software as a service (SaaS), platform as a service (PaaS) and infra
 ```md
 .
 ├── docs                 # Documentation
-│  └── links.md          # Links & Resources
+│  ├── links.md          # Links & Resources
+│  └── tools.md          # Tools & Utilities
 ├── .editorconfig        # Editor configuration
 ├── .gitignore           # Git ignore rules
 ├── .np-config.json      # NPM publish (np) configuration
