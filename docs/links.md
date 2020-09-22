@@ -1,4 +1,6 @@
-# Links & Resources
+# Learn Azure - Links & Resources
+
+---
 
 * [`awesome-azure`](https://github.com/kristofferandreasen/awesome-azure)
 * [`awesome-azure-learning`](https://github.com/ddneves/awesome-azure-learning)
