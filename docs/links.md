@@ -63,6 +63,8 @@ Azure Database for MySQL is a relational database service powered by the MySQL c
 
 ## Azure Kubernetes Service
 
+Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cluster in Azure. AKS reduces the complexity and operational overhead of managing Kubernetes by offloading much of that responsibility to Azure.
+
 * [Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
   * [Documentation](https://docs.microsoft.com/en-us/azure/aks/)
   * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)
