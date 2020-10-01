@@ -69,6 +69,12 @@ Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cl
   * [Documentation](https://docs.microsoft.com/en-us/azure/aks/)
   * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)
 
+## Azure Monitor
+
+* [Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/)
+* [Azure Monitor for Containers](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview)
+
 ## Azure Functions
 
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
