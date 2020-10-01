@@ -77,6 +77,13 @@ Azure Monitor maximizes the availability and performance of your applications an
 * [Documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/)
 * [Azure Monitor for Containers](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview)
 
+## Azure Dev Spaces
+
+Azure Dev Spaces is an extension to AKS that allows you to easily run and debug your code in the context of a larger application. You can test your code end-to-end, hit breakpoints on code running in the cluster, and share a development cluster between team members without interference.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/dev-spaces/about)
+* [Documentation](https://docs.microsoft.com/en-us/azure/dev-spaces/)
+
 ## Azure Functions
 
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
