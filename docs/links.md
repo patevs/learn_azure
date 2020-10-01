@@ -71,6 +71,8 @@ Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cl
 
 ## Azure Monitor
 
+Azure Monitor maximizes the availability and performance of your applications and services by delivering a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments.
+
 * [Overview](https://docs.microsoft.com/en-us/azure/azure-monitor/overview)
 * [Documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/)
 * [Azure Monitor for Containers](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview)
