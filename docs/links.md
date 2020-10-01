@@ -61,6 +61,12 @@ Azure Database for MySQL is a relational database service powered by the MySQL c
   * [Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
   * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/mysql/quickstart-create-mysql-server-database-using-azure-cli)
 
+## Azure Kubernetes Service
+
+* [Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+  * [Documentation](https://docs.microsoft.com/en-us/azure/aks/)
+  * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)
+
 ## Azure Functions
 
 * [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
