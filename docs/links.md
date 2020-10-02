@@ -110,5 +110,6 @@ Azure Dev Spaces is an extension to AKS that allows you to easily run and debug 
 * [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
   * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines)
   * [YAML Schema Reference](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema)
+  * [Predefined Variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables)
 
 ---
