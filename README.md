@@ -40,6 +40,7 @@ It provides software as a service (SaaS), platform as a service (PaaS) and infra
 │  ├── links.md          # Azure Services
 │  └── tools.md          # Tools & Utilities
 ├── media                # Media assets
+├── media                # Azure Pipelines examples
 ├── .editorconfig        # Editor configuration
 ├── .gitignore           # Git ignore rules
 ├── .np-config.json      # NPM publish (np) configuration
