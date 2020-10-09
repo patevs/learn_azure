@@ -2,6 +2,22 @@
 
 ---
 
+## Azure CLI
+
+The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources.
+
+* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
+  * [Documentation](https://github.com/MicrosoftDocs/azure-docs-cli)
+  * [Tips & Tricks](https://docs.microsoft.com/en-us/cli/azure/use-cli-effectively)
+  * [Configuration](https://samcogan.com/improving-the-terminal-experience-for-working-with-azure/)
+
+[](.)
+
+* [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/)
+  * [Installation](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
+
+---
+
 * [`azure-cli`](https://github.com/azure/azure-cli)
 * [`azure-powershell`](https://github.com/Azure/azure-powershell)
 
