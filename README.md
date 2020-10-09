@@ -36,8 +36,10 @@ It provides software as a service (SaaS), platform as a service (PaaS) and infra
 ```md
 .
 ├── docs                 # Documentation
-│  ├── links.md          # Links & Resources
+│  ├── devops.md         # Azure DevOps
+│  ├── links.md          # Azure Services
 │  └── tools.md          # Tools & Utilities
+├── media                # Media assets
 ├── .editorconfig        # Editor configuration
 ├── .gitignore           # Git ignore rules
 ├── .np-config.json      # NPM publish (np) configuration
