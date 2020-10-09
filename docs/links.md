@@ -7,16 +7,21 @@
 
 [](.)
 
-* [Azure Documentation](https://docs.microsoft.com/en-us/azure/?product=featured)
+* [Azure Documentation](https://docs.microsoft.com/en-us/azure)
 
 ---
 
 ## Azure CLI
 
+The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources.
+
 * [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
   * [Documentation](https://github.com/MicrosoftDocs/azure-docs-cli)
   * [Tips & Tricks](https://docs.microsoft.com/en-us/cli/azure/use-cli-effectively)
   * [Configuration](https://samcogan.com/improving-the-terminal-experience-for-working-with-azure/)
+
+[](.)
+
 * [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/)
   * [Installation](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
 
@@ -24,18 +29,25 @@
 
 ## Azure App Services
 
-* [App Services](https://docs.microsoft.com/en-us/azure/app-service/overview)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/app-service/)
-  * [CLI Samples](https://docs.microsoft.com/en-us/azure/app-service/samples-cli)
-  * [NodeJS Quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?pivots=platform-windows)
+Azure App Service enables you to build and host web apps, mobile back ends, and RESTful APIs in the programming language of your choice without managing infrastructure.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/app-service/overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/app-service/)
+* [CLI Samples](https://docs.microsoft.com/en-us/azure/app-service/samples-cli)
+* [NodeJS Quickstart](https://docs.microsoft.com/en-us/azure/app-service/quickstart-nodejs?pivots=platform-windows)
+
+---
 
 ## Azure Active Directory
 
 Azure Active Directory (Azure AD) is a multi-tenant, cloud-based identity and access management service.
 
-* [Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/)
-  * [B2C Documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
-  * [NodeJS Example](https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi)
+* [Overview](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
+* [Documentation](https://docs.microsoft.com/en-us/azure/active-directory/)
+* [B2C Documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
+* [NodeJS Example](https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi)
+
+---
 
 ## Azure Container Instances
 
