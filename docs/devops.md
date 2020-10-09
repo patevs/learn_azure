@@ -26,6 +26,7 @@ Azure Pipelines combines continuous integration (CI) and continuous delivery (CD
 * [Overview](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
 * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines)
 * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline-cli)
+* [`azure-pipelines-yaml`](https://github.com/microsoft/azure-pipelines-yaml) Azure Pipelines YAML examples and templates.
 
 [](.)
 
