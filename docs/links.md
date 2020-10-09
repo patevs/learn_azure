@@ -11,19 +11,20 @@
 
 ---
 
-## Azure CLI
+## Azure Active Directory
 
-The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources.
+Azure Active Directory (Azure AD) is a multi-tenant, cloud-based identity and access management service.
 
-* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
-  * [Documentation](https://github.com/MicrosoftDocs/azure-docs-cli)
-  * [Tips & Tricks](https://docs.microsoft.com/en-us/cli/azure/use-cli-effectively)
-  * [Configuration](https://samcogan.com/improving-the-terminal-experience-for-working-with-azure/)
+* [Overview](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
+* [Documentation](https://docs.microsoft.com/en-us/azure/active-directory/)
 
-[](.)
+### Azure Active Directory B2C
 
-* [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/)
-  * [Installation](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
+Azure Active Directory B2C (Azure AD B2C) is an identity management service that enables custom control of how your customers sign up, sign in, and manage their profiles when using your iOS, Android, .NET, single-page (SPA), and other applications.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/active-directory-b2c/overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
+* [NodeJS Example](https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi)
 
 ---
 
@@ -38,49 +39,53 @@ Azure App Service enables you to build and host web apps, mobile back ends, and 
 
 ---
 
-## Azure Active Directory
-
-Azure Active Directory (Azure AD) is a multi-tenant, cloud-based identity and access management service.
-
-* [Overview](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
-* [Documentation](https://docs.microsoft.com/en-us/azure/active-directory/)
-* [B2C Documentation](https://docs.microsoft.com/en-us/azure/active-directory-b2c/)
-* [NodeJS Example](https://github.com/Azure-Samples/active-directory-b2c-javascript-nodejs-webapi)
-
----
-
-## Azure Container Instances
+## Azure Container Instances (ACI)
 
 Azure Container Instances is a solution for any scenario that can operate in isolated containers, without orchestration. Run event-driven applications, quickly deploy from your container development pipelines, and run data processing and build jobs.
 
-* [Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/container-instances/)
-  * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart)
+* [Overview](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/container-instances/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-quickstart)
 
-## Azure Container Registry
+---
+
+## Azure Container Registry (ACR)
 
 Azure Container Registry is a managed, private Docker registry service based on the open-source Docker Registry 2.0.
 
-* [Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/container-registry/)
-  * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli)
+* [Overview](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
+* [Documentation](https://docs.microsoft.com/en-us/azure/container-registry/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-azure-cli)
+
+---
 
 ## Azure Database for MySQL
 
 Azure Database for MySQL is a relational database service powered by the MySQL community edition.
 
-* [Database for MySQL](https://docs.microsoft.com/en-us/azure/mysql/overview)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
-  * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/mysql/quickstart-create-mysql-server-database-using-azure-cli)
+* [Overview](https://docs.microsoft.com/en-us/azure/mysql/overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/mysql/quickstart-create-mysql-server-database-using-azure-cli)
 
-## Azure Kubernetes Service
+---
+
+## Azure Functions
+
+* [Overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+
+---
+
+## Azure Kubernetes Service (AKS)
 
 Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cluster in Azure. AKS reduces the complexity and operational overhead of managing Kubernetes by offloading much of that responsibility to Azure.
 
-* [Kubernetes Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/aks/)
-  * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)
-  * [Kubernetes Dashboard](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard)
+* [Overview](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes)
+* [Documentation](https://docs.microsoft.com/en-us/azure/aks/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)
+* [Kubernetes Dashboard](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard)
+
+---
 
 ## Azure Monitor
 
@@ -90,6 +95,8 @@ Azure Monitor maximizes the availability and performance of your applications an
 * [Documentation](https://docs.microsoft.com/en-us/azure/azure-monitor/)
 * [Azure Monitor for Containers](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview)
 
+---
+
 ## Azure Dev Spaces
 
 Azure Dev Spaces is an extension to AKS that allows you to easily run and debug your code in the context of a larger application. You can test your code end-to-end, hit breakpoints on code running in the cluster, and share a development cluster between team members without interference.
@@ -97,10 +104,14 @@ Azure Dev Spaces is an extension to AKS that allows you to easily run and debug 
 * [Overview](https://docs.microsoft.com/en-us/azure/dev-spaces/about)
 * [Documentation](https://docs.microsoft.com/en-us/azure/dev-spaces/)
 
+---
+
 ## Azure Functions
 
-* [Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+* [Overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+
+---
 
 ## Azure Virtual Machines
 
