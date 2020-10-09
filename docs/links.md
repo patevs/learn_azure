@@ -118,19 +118,3 @@ Azure Virtual Machines (VM) is one of several types of on-demand, scalable compu
 * [Manage VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm)
 
 ---
-
-## Azure DevOps
-
-### Azure Repos
-
-* [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos)
-  * [CLI Setup](https://docs.microsoft.com/en-us/azure/devops/repos/git/share-your-code-in-git-cmdline)
-
-### Azure Pipelines
-
-* [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
-  * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines)
-  * [YAML Schema Reference](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema)
-  * [Predefined Variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables)
-
----
