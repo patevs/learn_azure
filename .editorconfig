@@ -2,23 +2,37 @@
 # .editorconfig #
 # ------------- #
 
+# Version: 1.0.0 (Using https://semver.org/)
+# Updated: 22-09-2020
+
+# See http://EditorConfig.org for more information about .editorconfig files.
+
+##########################################
+# Common Settings
+##########################################
+
+# This file is the top-most EditorConfig file
 root = true
 
+# All Files
 [*]
-indent_style = space
-indent_size = 2
-tab_width = 2
-end_of_line = crlf
 charset = utf-8
-trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+# tab_width = 2
 insert_final_newline = true
+trim_trailing_whitespace = true
 
-# Markdown
+##########################################
+# File Extension Settings
+##########################################
+
+# YAML Files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown Files
 [*.md]
-max_line_length = 80
-
-# JSON
-[*.json]
-insert_final_newline = false
+trim_trailing_whitespace = false
 
 # EOF #
