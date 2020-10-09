@@ -2,8 +2,8 @@
 
 ---
 
-* [`awesome-azure`](https://github.com/kristofferandreasen/awesome-azure)
-* [`awesome-azure-learning`](https://github.com/ddneves/awesome-azure-learning)
+* [`awesome-azure`](https://github.com/kristofferandreasen/awesome-azure) A Curated List of Azure Resources.
+* [`awesome-azure-learning`](https://github.com/ddneves/awesome-azure-learning)  Azure learning references especially for Azure architecture.
 
 [](.)
 
