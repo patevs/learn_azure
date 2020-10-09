@@ -1,4 +1,4 @@
-# Azure DevOps
+# Learn Azure - DevOps
 
 Azure DevOps provides developer services to support teams to plan work, collaborate on code development, and build and deploy applications. Developers can work in the cloud using Azure DevOps Services or on-premises using Azure DevOps Server. Azure DevOps Server was formerly named Visual Studio Team Foundation Server (TFS).
 
