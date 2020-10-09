@@ -1,0 +1,25 @@
+# ------------- #
+# cache-npm.yml #
+# ------------- #
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  NPM_CONFIG_CACHE: $(Pipeline.Workspace)/.npm
+
+steps:
+
+- task: Cache@2
+  displayName: Cache NPM Modules
+  inputs:
+    key: 'npm | "$(Agent.OS)" | package-lock.json'
+    restoreKeys: npm | "$(Agent.OS)"
+    path: $(npm_config_cache)
+
+- script: npm ci
+
+# EOF #

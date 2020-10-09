@@ -1,0 +1,36 @@
+# -------------- #
+# cache-pnpm.yml #
+# -------------- #
+
+trigger:
+  - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  PNPM_CONFIG_CACHE:  /home/vsts/.pnpm-store
+
+# Content-addressable store is at: /home/vsts/.pnpm-store/v3
+# Virtual store is at:             node_modules/.pnpm
+
+steps:
+
+- bash: |
+    if [ -f pnpm-lock.yaml ]; then
+      echo "##vso[task.setVariable variable=PNPM_LOCK_EXISTS]true"
+    fi
+
+- script: echo "pnpm-lock.yaml exists!"
+  condition: eq(variables.PNPM_LOCK_EXISTS, 'true')
+
+- task: Cache@2
+  displayName: 'Cache PNPM Packages'
+  inputs:
+    key: 'pnpm | "$(Agent.OS)" | pnpm-lock.yaml'
+    restoreKeys: pnpm | "$(Agent.OS)"
+    path: $(PNPM_CONFIG_CACHE)
+
+- script: pnpm install --frozen-lockfile
+
+# EOF #

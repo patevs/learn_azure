@@ -1,0 +1,33 @@
+# -------------- #
+# cache-yarn.yml #
+# -------------- #
+
+trigger:
+  - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+
+steps:
+
+- bash: |
+    if [ -f yarn.lock ]; then
+      echo "##vso[task.setVariable variable=YARN_LOCK_EXISTS]true"
+    fi
+
+- script: echo "yarn.lock exists!"
+  condition: eq(variables.YARN_LOCK_EXISTS, 'true')
+
+- task: Cache@2
+  displayName: Cache Yarn Packages
+  inputs:
+    key: 'yarn | "$(Agent.OS)" | yarn.lock'
+    restoreKeys: yarn | "$(Agent.OS)"
+    path: $(YARN_CACHE_FOLDER)
+
+- script: yarn --frozen-lockfile
+
+# EOF #

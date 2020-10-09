@@ -1,0 +1,31 @@
+# ------------------- #
+# matrix-platform.yml #
+# ------------------- #
+
+# You can build and test your project on multiple platforms.
+# One way to do it is with strategy and matrix. You can use
+# variables to conveniently put data into various parts of
+# a pipeline. For this example, we'll use a variable to pass
+# in the name of the image we want to use.
+
+trigger:
+  - master
+
+strategy:
+  matrix:
+    linux:
+      imageName: "ubuntu-16.04"
+    mac:
+      imageName: "macos-10.14"
+    windows:
+      imageName: "vs2017-win2016"
+  maxParallel: 3
+
+pool:
+  vmImage: $(imageName)
+
+steps:
+- script: |
+    "echo Running on: $(Agent.OS)"
+
+# EOF #

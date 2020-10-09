@@ -1,0 +1,32 @@
+# ----------------------- #
+# container/multi-job.yml #
+# ----------------------- #
+
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases
+
+# Multiple jobs
+
+# Containers are also useful for running the same steps in multiple jobs.
+# In the following example, the same steps run in multiple versions of Ubuntu Linux.
+# (And we don't have to mention the jobs keyword, since there's only a single job defined.)
+
+pool:
+  vmImage: 'ubuntu-18.04'
+
+strategy:
+  matrix:
+    ubuntu14:
+      containerImage: ubuntu:14.04
+    ubuntu16:
+      containerImage: ubuntu:16.04
+    ubuntu18:
+      containerImage: ubuntu:18.04
+
+container: $[ variables['containerImage'] ]
+
+steps:
+- script: |
+    "echo Running on: $(Agent.OS)"
+    "echo Environment: $(printenv)"
+
+# EOF #

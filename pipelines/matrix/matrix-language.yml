@@ -1,0 +1,33 @@
+# ------------------- #
+# matrix-language.yml #
+# ------------------- #
+
+# To build a project using different versions of that language,
+# you can use a matrix of versions and a variable. In this step
+# you can either build the Java project with two different versions
+# of Java on a single platform or run different versions of Java on
+# different platforms.
+
+trigger:
+  - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+strategy:
+  matrix:
+    node_10_x:
+      node_version: 10.x
+    node_12_x:
+      node_version: 12.x
+    node_14_x:
+      node_version: 14.x
+  maxParallel: 3
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: $(node_version)
+  - script: node -v
+
+# EOF #
