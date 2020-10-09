@@ -32,6 +32,7 @@ Azure Pipelines combines continuous integration (CI) and continuous delivery (CD
 
 * [YAML Schema Reference](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema)
 * [Predefined Variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables)
+* [Variables in Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables)
 * [Template Types & Usage](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/templates)
 
 [](.)
