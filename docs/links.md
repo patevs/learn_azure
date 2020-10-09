@@ -71,6 +71,8 @@ Azure Database for MySQL is a relational database service powered by the MySQL c
 
 ## Azure Functions
 
+Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure.
+
 * [Overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
 * [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
 
@@ -106,18 +108,14 @@ Azure Dev Spaces is an extension to AKS that allows you to easily run and debug 
 
 ---
 
-## Azure Functions
-
-* [Overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
-* [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
-
----
-
 ## Azure Virtual Machines
 
-* [Azure Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/)
-  * [CLI Quick Start](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli)
-  * [Manage VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm)
+Azure Virtual Machines (VM) is one of several types of on-demand, scalable computing resources that Azure offers. Typically, you choose a VM when you need more control over the computing environment than the other choices offer.
+
+* [Documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/)
+* [Overview](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/overview)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli)
+* [Manage VMs](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm)
 
 ---
 
