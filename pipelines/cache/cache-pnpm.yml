@@ -9,28 +9,61 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
+  # PNPM_CONFIG_CACHE: $(Pipeline.Workspace)/node_modules/.pnpm
   PNPM_CONFIG_CACHE:  /home/vsts/.pnpm-store
 
 # Content-addressable store is at: /home/vsts/.pnpm-store/v3
 # Virtual store is at:             node_modules/.pnpm
 
-steps:
+stages:
 
-- bash: |
-    if [ -f pnpm-lock.yaml ]; then
-      echo "##vso[task.setVariable variable=PNPM_LOCK_EXISTS]true"
-    fi
+- stage: PREPARE
+  jobs:
+  - job: INSTALL_NODE
+    displayName: 'Install NodeJS'
+    steps:
+    - task: NodeTool@0
+      displayName: 'Install NodeJS 12'
+      inputs:
+        versionSpec: '12.x'
+    - script: |
+        printf "\n ------------------------"
+        printf "\n  Node version: $(node -v)"
+        printf "\n  NPM version:  $(npm -v)"
+        printf "\n  Yarn version: $(yarn -v)"
+        printf "\n ------------------------"
+      displayName: "Print Environment Details"
 
-- script: echo "pnpm-lock.yaml exists!"
-  condition: eq(variables.PNPM_LOCK_EXISTS, 'true')
+- stage: INSTALL
+  jobs:
+  - job: PNPM_INSTALL
+    displayName: Install Dependencies
+    steps:
 
-- task: Cache@2
-  displayName: 'Cache PNPM Packages'
-  inputs:
-    key: 'pnpm | "$(Agent.OS)" | pnpm-lock.yaml'
-    restoreKeys: pnpm | "$(Agent.OS)"
-    path: $(PNPM_CONFIG_CACHE)
+    ## Ensure pnpm-lock.yaml exists
+    - bash: |
+        if [ -f pnpm-lock.yaml ]; then
+          echo "##vso[task.setVariable variable=PNPM_LOCK_EXISTS]true"
+        fi
+      displayName: Ensure pnpm-lock.yaml exists
 
-- script: pnpm install --frozen-lockfile
+    ## Cache PNPM Packages
+    - task: Cache@2
+      displayName: Cache PNPM Packages
+      condition: eq(variables.PNPM_LOCK_EXISTS, 'true')
+      inputs:
+        key: 'pnpm | "$(Agent.OS)" | pnpm-lock.yaml'
+        restoreKeys: pnpm | "$(Agent.OS)"
+        path: $(PNPM_CONFIG_CACHE)
+
+    ## Install PNPM
+    - script: |
+        sudo npm install --global pnpm
+        sudo pnpm install --global pnpm
+      displayName: Install PNPM
+
+    ## Install project dependencies with PNPM
+    - script: sudo pnpm install --frozen-lockfile
+      displayName: Install Dependencies with PNPM
 
 # EOF #
