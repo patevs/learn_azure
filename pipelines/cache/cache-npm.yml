@@ -44,7 +44,7 @@ stages:
         fi
       displayName: Ensure package-lock.json exists
 
-    ## Cache NPM dependencies
+    ## Cache NPM packages
     - task: Cache@2
       displayName: Cache NPM Packages
       condition: eq(variables.PACKAGE_LOCK_EXISTS, 'true')
@@ -53,7 +53,7 @@ stages:
         restoreKeys: npm | "$(Agent.OS)"
         path: $(npm_config_cache)
 
-    ## Install NPM dependencies
+    ## Install project dependencies with NPM
     - task: Npm@1
       displayName: Install Dependencies with NPM
       inputs:
