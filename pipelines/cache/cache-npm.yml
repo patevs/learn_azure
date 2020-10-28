@@ -34,7 +34,7 @@ stages:
 - stage: INSTALL
   jobs:
   - job: NPM_INSTALL
-    displayName: Install NPM Dependencies
+    displayName: Install Dependencies
     steps:
 
     ## Ensure package-lock.json exists
@@ -55,7 +55,7 @@ stages:
 
     ## Install NPM dependencies
     - task: Npm@1
-      displayName: Install NPM Dependencies
+      displayName: Install Dependencies with NPM
       inputs:
         command: ci
 
