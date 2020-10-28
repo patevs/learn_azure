@@ -11,23 +11,49 @@ pool:
 variables:
   YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
 
-steps:
+stages:
 
-- bash: |
-    if [ -f yarn.lock ]; then
-      echo "##vso[task.setVariable variable=YARN_LOCK_EXISTS]true"
-    fi
+- stage: PREPARE
+  jobs:
+  - job: INSTALL_NODE
+    displayName: Install NodeJS
+    steps:
+    - task: NodeTool@0
+      displayName: 'Install NodeJS 12'
+      inputs:
+        versionSpec: '12.x'
+    - script: |
+        printf "\n ------------------------"
+        printf "\n  Node version: $(node -v)"
+        printf "\n  NPM version:  $(npm -v)"
+        printf "\n  Yarn version: $(yarn -v)"
+        printf "\n ------------------------"
+      displayName: Print Environment Details
 
-- script: echo "yarn.lock exists!"
-  condition: eq(variables.YARN_LOCK_EXISTS, 'true')
+- stage: INSTALL
+  jobs:
+  - job: YARN_INSTALL
+    displayName: Install Dependencies
+    steps:
 
-- task: Cache@2
-  displayName: Cache Yarn Packages
-  inputs:
-    key: 'yarn | "$(Agent.OS)" | yarn.lock'
-    restoreKeys: yarn | "$(Agent.OS)"
-    path: $(YARN_CACHE_FOLDER)
+    ## Ensure yarn.lock exists
+    - bash: |
+        if [ -f yarn.lock ]; then
+          echo "##vso[task.setVariable variable=YARN_LOCK_EXISTS]true"
+        fi
+      displayName: Ensure yarn.lock exists
 
-- script: yarn --frozen-lockfile
+    ## Cache Yarn packages
+    - task: Cache@2
+      displayName: Cache Yarn Packages
+      condition: eq(variables.YARN_LOCK_EXISTS, 'true')
+      inputs:
+        key: 'yarn | "$(Agent.OS)" | yarn.lock'
+        restoreKeys: yarn | "$(Agent.OS)"
+        path: $(YARN_CACHE_FOLDER)
+
+    ## Install project dependencies with Yarn
+    - script: yarn --frozen-lockfile
+      displayName: Install Dependencies with Yarn
 
 # EOF #
