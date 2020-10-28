@@ -2,6 +2,7 @@
 # cache-npm.yml #
 # ------------- #
 
+# Run on push to master branche
 trigger:
 - master
 
@@ -11,15 +12,50 @@ pool:
 variables:
   NPM_CONFIG_CACHE: $(Pipeline.Workspace)/.npm
 
-steps:
+stages:
 
-- task: Cache@2
-  displayName: Cache NPM Modules
-  inputs:
-    key: 'npm | "$(Agent.OS)" | package-lock.json'
-    restoreKeys: npm | "$(Agent.OS)"
-    path: $(npm_config_cache)
+- stage: PREPARE
+  jobs:
+  - job: INSTALL_NODE
+    displayName: Install NodeJS
+    steps:
+    - task: NodeTool@0
+      displayName: 'Install NodeJS 12'
+      inputs:
+        versionSpec: '12.x'
+    - script: |
+        printf "\n ------------------------"
+        printf "\n  Node version: $(node -v)"
+        printf "\n  NPM version:  $(npm -v)"
+        printf "\n  Yarn version: $(yarn -v)"
+        printf "\n ------------------------"
+      displayName: Print Environment Details
 
-- script: npm ci
+- stage: INSTALL
+  jobs:
+  - job: NPM_INSTALL
+    displayName: Install NPM Dependencies
+    steps:
+
+    ## Ensure package-lock.json exists
+    - bash: |
+        if [ -f package-lock.json ]; then
+          echo "##vso[task.setVariable variable=PACKAGE_LOCK_EXISTS]true"
+        fi
+
+    ## Cache NPM dependencies
+    - task: Cache@2
+      displayName: Cache NPM Modules
+      condition: eq(variables.PACKAGE_LOCK_EXISTS, 'true')
+      inputs:
+        key: 'npm | "$(Agent.OS)" | package-lock.json'
+        restoreKeys: npm | "$(Agent.OS)"
+        path: $(npm_config_cache)
+
+    ## Install NPM dependencies
+    - task: Npm@1
+      displayName: Install NPM Dependencies
+      inputs:
+        command: ci
 
 # EOF #
