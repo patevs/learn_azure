@@ -42,6 +42,7 @@ stages:
         if [ -f package-lock.json ]; then
           echo "##vso[task.setVariable variable=PACKAGE_LOCK_EXISTS]true"
         fi
+      displayName: Ensure package-lock.json exists
 
     ## Cache NPM dependencies
     - task: Cache@2
