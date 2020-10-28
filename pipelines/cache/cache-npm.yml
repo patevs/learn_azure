@@ -46,7 +46,7 @@ stages:
 
     ## Cache NPM dependencies
     - task: Cache@2
-      displayName: Cache NPM Modules
+      displayName: Cache NPM Packages
       condition: eq(variables.PACKAGE_LOCK_EXISTS, 'true')
       inputs:
         key: 'npm | "$(Agent.OS)" | package-lock.json'
