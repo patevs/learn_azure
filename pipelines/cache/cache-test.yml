@@ -1,0 +1,102 @@
+# ------------------- #
+# azure-pipelines.yml #
+# ------------------- #
+
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+# Run on push to master or develop branches
+trigger:
+- master
+- develop
+
+pool:
+  vmImage: 'ubuntu-latest' # 'window-latest'
+
+variables:
+  NPM_CONFIG_CACHE: $(Pipeline.Workspace)/.npm
+  # PNPM_CONFIG_CACHE: $(Pipeline.Workspace)/node_modules/.pnpm
+  PNPM_CONFIG_CACHE:  /home/vsts/.pnpm-store
+  YARN_CACHE_FOLDER: $(Pipeline.Workspace)/.yarn
+
+# Content-addressable store is at: /home/vsts/.pnpm-store/v3
+# Virtual store is at:             node_modules/.pnpm
+
+stages:
+
+- stage: PREPARE
+  jobs:
+  - job: INSTALL_NODE
+    displayName: 'Install NodeJS'
+    steps:
+    - task: NodeTool@0
+      displayName: 'Install NodeJS 12'
+      inputs:
+        versionSpec: '12.x'
+    - script: |
+        printf "\n ------------------------"
+        printf "\n  Node version: $(node -v)"
+        printf "\n  NPM version:  $(npm -v)"
+        printf "\n  Yarn version: $(yarn -v)"
+        printf "\n ------------------------"
+      displayName: "Print Environment Details"
+
+- stage: BUILD
+  jobs:
+
+  - job: BUILD_PNPM
+    displayName: "Build with PNPM"
+    steps:
+    - bash: |
+        if [ -f pnpm-lock.yaml ]; then
+          echo "##vso[task.setVariable variable=PNPM_LOCK_EXISTS]true"
+        fi
+    - script: echo "pnpm-lock.yaml exists!"
+      condition: eq(variables.PNPM_LOCK_EXISTS, 'true')
+    - task: Cache@2
+      displayName: 'Cache PNPM Packages'
+      inputs:
+        key: 'pnpm | "$(Agent.OS)" | pnpm-lock.yaml'
+        restoreKeys: pnpm | "$(Agent.OS)"
+        path: $(PNPM_CONFIG_CACHE)
+
+  - job: BUILD_YARN
+    displayName: "Build with Yarn"
+    dependsOn: BUILD_PNPM
+    condition: failed()
+    steps:
+    - bash: |
+        if [ -f yarn.lock ]; then
+          echo "##vso[task.setVariable variable=YARN_LOCK_EXISTS]true"
+        fi
+    - script: echo "yarn.lock exists!"
+      condition: eq(variables.YARN_LOCK_EXISTS, 'true')
+    - task: Cache@2
+      displayName: 'Cache Yarn Packages'
+      inputs:
+        key: 'yarn | "$(Agent.OS)" | yarn.lock'
+        restoreKeys: pnpm | "$(Agent.OS)"
+        path: $(YARN_CONFIG_CACHE)
+
+    ## Install Node dependencies with yarn
+    # - script: yarn install --frozen-lockfile
+    - script: yarn install
+      displayName: 'Run yarn install'
+#    - task: Cache@2
+#      displayName: 'Cache PNPM Packages'
+#      inputs:
+#        key: 'pnpm | "$(Agent.OS)"'
+#        restoreKeys: pnpm | "$(Agent.OS)"
+#        path: $(PNPM_CONFIG_CACHE)
+#    - script: |
+#        sudo npm install --global pnpm
+#        sudo pnpm install --global pnpm
+#    - script: sudo pnpm install
+#      displayName: "Install Dependencies with PNPM"
+#    - script: |
+#        ls /home/vsts/.pnpm-store
+#        ls /home/vsts/.pnpm-store/v3
+
+    # EOF #
