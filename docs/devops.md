@@ -26,7 +26,6 @@ Azure Pipelines combines continuous integration (CI) and continuous delivery (CD
 * [Overview](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
 * [Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines)
 * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline-cli)
-* [`azure-pipelines-yaml`](https://github.com/microsoft/azure-pipelines-yaml) Azure Pipelines YAML examples and templates.
 
 [](.)
 
@@ -39,5 +38,11 @@ Azure Pipelines combines continuous integration (CI) and continuous delivery (CD
 
 * [Pipelines Agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/agents)
   * [Self-hosted Windows Agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows)
+
+[](.)
+
+* [`azure-pipelines-yaml`](https://github.com/microsoft/azure-pipelines-yaml) Azure Pipelines YAML examples and templates.
+  * [`docker-container-webapp.yml`](https://github.com/microsoft/azure-pipelines-yaml/blob/master/templates/docker-container-webapp.yml) Build a Docker image, push it to an Azure Container Registry, and deploy it to an Azure Web App.
+  * [`node.js-react-webapp`](https://github.com/microsoft/azure-pipelines-yaml/blob/master/templates/node.js-react-webapp-to-linux-on-azure.yml) Build a Node.js React app and deploy it to Azure as a Linux web app.
 
 ---
