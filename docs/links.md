@@ -69,6 +69,16 @@ Azure Database for MySQL is a relational database service powered by the MySQL c
 
 ---
 
+## Azure Front Door
+
+Azure Front Door is a global, scalable entry-point that uses the Microsoft global edge network to create fast, secure, and widely scalable web applications.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/frontdoor/front-door-overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/frontdoor/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/frontdoor/quickstart-create-front-door-cli)
+
+---
+
 ## Azure Functions
 
 Azure Functions is a serverless compute service that lets you run event-triggered code without having to explicitly provision or manage infrastructure.
