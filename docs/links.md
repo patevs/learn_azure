@@ -121,6 +121,16 @@ Azure Monitor maximizes the availability and performance of your applications an
 
 ---
 
+## Azure Traffic Manager
+
+Azure Traffic Manager is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/traffic-manager/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/traffic-manager/quickstart-create-traffic-manager-profile-cli)
+
+---
+
 ## Azure Virtual Machines
 
 Azure Virtual Machines (VM) is one of several types of on-demand, scalable computing resources that Azure offers. Typically, you choose a VM when you need more control over the computing environment than the other choices offer.
