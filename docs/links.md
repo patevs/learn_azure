@@ -97,6 +97,13 @@ Azure Kubernetes Service (AKS) makes it simple to deploy a managed Kubernetes cl
 * [CLI Quickstart](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough)
 * [Kubernetes Dashboard](https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard)
 
+## Azure Dev Spaces
+
+Azure Dev Spaces is an extension to AKS that allows you to easily run and debug your code in the context of a larger application. You can test your code end-to-end, hit breakpoints on code running in the cluster, and share a development cluster between team members without interference.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/dev-spaces/about)
+* [Documentation](https://docs.microsoft.com/en-us/azure/dev-spaces/)
+
 ---
 
 ## Azure Monitor
@@ -111,15 +118,6 @@ Azure Monitor maximizes the availability and performance of your applications an
 * [Azure Monitor for Containers](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview)
 * [Monitor Containerized App Services](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/run-manage-monitor-docker-environments/monitor-containerized-application-services)
 * [Container Monitoring Solution](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/containers)
-
----
-
-## Azure Dev Spaces
-
-Azure Dev Spaces is an extension to AKS that allows you to easily run and debug your code in the context of a larger application. You can test your code end-to-end, hit breakpoints on code running in the cluster, and share a development cluster between team members without interference.
-
-* [Overview](https://docs.microsoft.com/en-us/azure/dev-spaces/about)
-* [Documentation](https://docs.microsoft.com/en-us/azure/dev-spaces/)
 
 ---
 
