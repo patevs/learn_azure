@@ -85,6 +85,7 @@ Azure Functions is a serverless compute service that lets you run event-triggere
 
 * [Overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
 * [Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-azure-function-azure-cli)
 
 ---
 
