@@ -45,6 +45,7 @@ Azure Automation delivers a cloud-based automation and configuration service tha
 
 * [Overview](https://docs.microsoft.com/en-us/azure/automation/automation-intro)
 * [Documentation](https://docs.microsoft.com/en-us/azure/automation/)
+* [Start/Stop VMs During Off-Hours](https://docs.microsoft.com/en-us/azure/automation/automation-solution-vm-management)
 
 ---
 
