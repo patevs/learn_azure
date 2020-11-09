@@ -119,6 +119,7 @@ Azure Monitor maximizes the availability and performance of your applications an
 * [Azure Monitor for Containers](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/container-insights-overview)
 * [Monitor Containerized App Services](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/run-manage-monitor-docker-environments/monitor-containerized-application-services)
 * [Container Monitoring Solution](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/containers)
+* [Application Map](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-map)
 
 ---
 
