@@ -39,6 +39,15 @@ Azure App Service enables you to build and host web apps, mobile back ends, and 
 
 ---
 
+## Azure Automation
+
+Azure Automation delivers a cloud-based automation and configuration service that supports consistent management across your Azure and non-Azure environments. It comprises process automation, configuration management, update management, shared capabilities, and heterogeneous features. Automation gives you complete control during deployment, operations, and decommissioning of workloads and resources.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/automation/automation-intro)
+* [Documentation](https://docs.microsoft.com/en-us/azure/automation/)
+
+---
+
 ## Azure Container Instances (ACI)
 
 Azure Container Instances is a solution for any scenario that can operate in isolated containers, without orchestration. Run event-driven applications, quickly deploy from your container development pipelines, and run data processing and build jobs.
