@@ -1,30 +1,30 @@
 {
-  "name": "learn_azure",
-  "version": "0.10.1",
-  "description": "Links, resources, and code related to my learning of Azure cloud services",
-  "author": "PatEvs",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/patevs/learn_azure.git"
-  },
-  "scripts": {
-    "release": "np"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "commitlint-config-gitmoji": "^1.0.1",
-    "husky": "^4.3.0",
-    "np": "^7.0.0"
-  },
-  "commitlint": {
-    "extends": [
-      "./node_modules/commitlint-config-gitmoji"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    "name": "learn_azure",
+    "version": "0.10.1",
+    "description": "Links, resources, and code related to my learning of Azure cloud services",
+    "author": "PatEvs",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/patevs/learn_azure.git"
+    },
+    "scripts": {
+        "release": "np"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "commitlint-config-gitmoji": "^1.0.1",
+        "husky": "^4.3.0",
+        "np": "^7.0.0"
+    },
+    "commitlint": {
+        "extends": [
+        "./node_modules/commitlint-config-gitmoji"
+        ]
+    },
+    "husky": {
+        "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
     }
-  }
 }
