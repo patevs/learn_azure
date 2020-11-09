@@ -1,6 +1,6 @@
 {
     "name": "learn_azure",
-    "version": "0.10.1",
+    "version": "0.10.2",
     "description": "Links, resources, and code related to my learning of Azure cloud services",
     "author": "PatEvs",
     "license": "MIT",
@@ -19,12 +19,12 @@
     },
     "commitlint": {
         "extends": [
-        "./node_modules/commitlint-config-gitmoji"
+            "./node_modules/commitlint-config-gitmoji"
         ]
     },
     "husky": {
         "hooks": {
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     }
 }
