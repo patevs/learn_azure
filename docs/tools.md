@@ -29,3 +29,13 @@ The Azure command-line interface (Azure CLI) is a set of commands used to create
 * [`AzureSaveMoney`](https://itoleck.visualstudio.com/_git/AzureSaveMoney) PowerShell module to report on and opportunity to delete unused Azure resources and save money.
 
 ---
+
+## Azure CLI Extensions
+
+* ai-examples
+* application-insights
+* azure-devops
+* log-analytics-solution
+* webapp
+
+---
