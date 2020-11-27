@@ -1,0 +1,95 @@
+# --------------------------------- #
+# pipelines/docker/docker-build.yml #
+# --------------------------------- #
+
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+# Run on push to master branch only
+trigger:
+  - master
+
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: '<service-connection-name>'
+  imageRepository:    'image-name'
+  containerRegistry:  'acr-name.azurecr.io'
+  dockerfilePath:     '$(Build.SourcesDirectory)/Dockerfile'
+  tag:                '$(Build.BuildId)'
+  artifactsPath:     '$(Build.ArtifactStagingDirectory)'
+
+
+stages:
+
+- stage: BUILD
+  jobs:
+  - job:
+    displayName: Build Docker Image
+    steps:
+
+    - task: Docker@2
+      displayName: 'Build Docker image'
+      inputs:
+        command: 'build'
+        dockerfile: $(dockerfilePath)
+        repository: '$(imageRepository)'
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+          latest
+
+#    - script: /usr/bin/docker save
+#        --output $(artifactsPath)/$(imageRepository)-all.tar
+#        $(containerRegistry)/$(imageRepository)
+#      displayName: 'Save image to archive'
+
+    - script: /usr/bin/docker save
+        $(containerRegistry)/$(imageRepository) |
+        gzip > $(artifactsPath)/$(imageRepository)-all.tar.gz
+      displayName: 'Save image to archive'
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(artifactsPath)'
+        ArtifactName: 'build'
+      displayName: 'Publish Artifact: $(imageRepository)-all.tar.gz'
+
+
+- stage: DEPLOY
+  jobs:
+  - job:
+    displayName: Deploy Docker Image
+    steps:
+
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'build'
+        downloadPath: '$(System.ArtifactsDirectory)'
+      displayName: 'Restore Artifact: $(imageRepository)-all.tar.gz'
+
+    - script: /usr/bin/docker load
+        --input $(System.ArtifactsDirectory)/build/$(imageRepository)-all.tar.gz
+      displayName: 'Load image from archive'
+
+    - task: Docker@2
+      enabled: false
+      displayName: Push Docker image
+      inputs:
+        command: push
+        dockerfile: $(dockerfilePath)
+        repository: $(imageRepository)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+          latest
+
+# EOF #
+
