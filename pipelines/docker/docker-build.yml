@@ -1,0 +1,96 @@
+# ----------------------------------- #
+# pipelines/docker/docker-archive.yml #
+# ----------------------------------- #
+
+# Docker
+# Build and archive a Docker image.
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  - master
+  - develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: '<service-connection-name>'
+  imageRepository:    'image-name'
+  containerRegistry:  'acr-name.azurecr.io'
+  dockerfilePath:     '$(Build.SourcesDirectory)/Dockerfile'
+  tag:                '$(Build.BuildId)'
+
+
+stages:
+
+- stage: BUILD
+  jobs:
+  - job: BUILD_DOCKER
+    displayName: Build Docker Image
+    steps:
+
+    - task: Docker@2
+      displayName: 'Build Docker@2 image'
+      inputs:
+        command: 'build'
+        dockerfile: $(dockerfilePath)
+        repository: $(imageRepository)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+          latest
+
+    - script: /usr/bin/docker image save $(imageRepository):$(tag) -o $(Build.ArtifactStagingDirectory)/imagetest.tar
+
+    - script: |
+        docker build . -t $(imageRepository):$(tag) -t $(imageRepository):latest
+      displayName: Build Docker Image
+      enabled: false
+
+    - script: |
+        docker image save $(imageRepository):$(tag) $(imageRepository):latest -o $(Build.ArtifactStagingDirectory)/imagetest.tar
+      enabled: false
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
+
+    - task: Docker@2
+      displayName: push
+      inputs:
+        command: push
+        dockerfile: $(dockerfilePath)
+        repository: $(imageRepository)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tag)
+          latest
+
+#    - task: CopyFiles@2
+#      inputs:
+#        Contents: 'build/**' # Pull the build directory (React)
+#        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+# stages:
+# - stage: Build
+#   displayName: Build and push stage
+#   jobs:
+#   - job: Build
+#     displayName: Build
+#     pool:
+#       vmImage: $(vmImageName)
+#     steps:
+#     - task: Docker@2
+#       displayName: Build and push an image to container registry
+#       inputs:
+#         command: buildAndPush
+#         repository: $(imageRepository)
+#         dockerfile: $(dockerfilePath)
+#         containerRegistry: $(dockerRegistryServiceConnection)
+#         tags: |
+#           $(tag)
+#           latest
+
+# EOF #
