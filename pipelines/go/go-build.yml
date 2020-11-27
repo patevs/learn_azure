@@ -1,0 +1,101 @@
+# ------------------------- #
+# pipelines/go/go-build.yml #
+# ------------------------- #
+
+# https://docs.microsoft.com/azure/devops/pipelines/languages/go
+
+# Run on push to `develop` branch only.
+trigger:
+  - develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  GO_PATH:         '/home/vsts/go'
+  GO_CACHE_FOLDER: '$(GO_PATH)/pkg'
+  APP_ROOT:        '$(GO_PATH)/src/<app_name>'
+  # Container registry service connection established during pipeline creation
+  # TODO: Use an environment variable to store service connection string
+  azureSubscription:    '<service-connection-name>'
+  appName:              '<app-name>'
+  acrServiceConnection: '<acr-service-connection-name>'
+  containerRegistry:    '<acr-name>.azurecr.io'
+  imageRepository:      '<image-name>'
+  dockerfilePath:       '$(Build.SourcesDirectory)/Dockerfile'
+
+
+stages:
+
+# Prepare the build environment
+- stage: PREPARE
+  jobs:
+  - job: PREPARE_ENVIRONMENT
+    displayName: 'Prepare Environment'
+    steps:
+
+    ## Print Environment Infomation
+    - script: |
+        printf "\n ------------------------"
+        printf "\n Pipeline: $(Build.DefinitionName)"
+        printf "\n ------------------------"
+        printf "\n Running on: $(Agent.OS) $(Agent.OSArchitecture) $(Agent.Name) $(Agent.Version)"
+        printf "\n ------------------------"
+        printf "\n $(go version)"
+        printf "\n $(docker -v)"
+        printf "\n ------------------------"
+        printf "\n APP_ROOT: $(APP_ROOT)"
+        printf "\n ------------------------\n"
+      displayName: Print Environment Details
+
+
+# Build Go backend
+- stage: BUILD
+  jobs:
+  - job:
+    displayName: Build Go Backend
+    steps:
+
+    ## Install Go
+    - task: GoTool@0
+      displayName: Install Go v1.15.5
+      inputs:
+        version: '1.15.5'
+
+    ## Copy source code into GOPATH
+    - task: CopyFiles@2
+      displayName: Copy Source into GOPATH
+      inputs:
+        Contents: '**'
+        TargetFolder: '$(APP_ROOT)'
+
+    ## Initialize Go Module
+    - script: |
+        go mod init pos_api
+      displayName: Initialize Go Module
+      workingDirectory: '$(APP_ROOT)'
+
+    ## Build the Project
+    - task: Go@0
+      displayName: Build the Project
+      inputs:
+        command: 'build'
+        arguments: '-v'
+        workingDirectory: '$(APP_ROOT)'
+
+    ## Copy the build output to the staging directory
+    - task: CopyFiles@2
+      displayName: Copy Build to Staging Area
+      inputs:
+        Contents: $(appName)
+        SourceFolder: $(APP_ROOT)
+        TargetFolder: $(Build.ArtifactStagingDirectory)
+
+    ## Publish the build output as pipeline artifact
+    - task: PublishBuildArtifacts@1
+      displayName:  Archive Build
+      inputs:
+        pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(appName)'
+        ArtifactName: '$(appName)'
+
+# EOF #
