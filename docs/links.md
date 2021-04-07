@@ -49,6 +49,16 @@ Azure Automation delivers a cloud-based automation and configuration service tha
 
 ---
 
+## Azure Blob Storage
+
+Azure Blob storage is Microsoft's object storage solution for the cloud. Blob storage is optimized for storing massive amounts of unstructured data. Unstructured data is data that doesn't adhere to a particular data model or definition, such as text or binary data.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/)
+* [CLI Samples](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-samples-blobs-cli)
+
+---
+
 ## Azure CDN
 
 Azure Content Delivery Network (CDN) is a global CDN solution for delivering high-bandwidth content. It can be hosted in Azure or any other location. With Azure CDN, you can cache static objects loaded from Azure Blob storage, a web application, or any publicly accessible web server, by using the closest point of presence (POP) server. Azure CDN can also accelerate dynamic content, which cannot be cached, by leveraging various network and routing optimizations.
