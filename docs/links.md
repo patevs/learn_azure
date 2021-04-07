@@ -49,6 +49,16 @@ Azure Automation delivers a cloud-based automation and configuration service tha
 
 ---
 
+## Azure CDN
+
+Azure Content Delivery Network (CDN) is a global CDN solution for delivering high-bandwidth content. It can be hosted in Azure or any other location. With Azure CDN, you can cache static objects loaded from Azure Blob storage, a web application, or any publicly accessible web server, by using the closest point of presence (POP) server. Azure CDN can also accelerate dynamic content, which cannot be cached, by leveraging various network and routing optimizations.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/cdn/)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/cdn/scripts/cli/cdn-azure-cli-create-endpoint)
+
+---
+
 ## Azure Container Instances (ACI)
 
 Azure Container Instances is a solution for any scenario that can operate in isolated containers, without orchestration. Run event-driven applications, quickly deploy from your container development pipelines, and run data processing and build jobs.
