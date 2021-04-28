@@ -153,6 +153,26 @@ Azure Monitor maximizes the availability and performance of your applications an
 
 ---
 
+## Azure Resource Graph
+
+Azure Resource Graph is a service in Azure that is designed to extend Azure Resource Management by providing efficient and performant resource exploration with the ability to query at scale across a given set of subscriptions so that you can effectively govern your environment.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/governance/resource-graph/overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/governance/resource-graph/)
+  * [Understanding the Query Language](https://docs.microsoft.com/en-us/azure/governance/resource-graph/concepts/query-language)
+* [CLI Quickstart](https://docs.microsoft.com/en-us/azure/governance/resource-graph/first-query-azurecli)
+
+    ```bash
+    # Add Resource Graph extension
+    $ az extension add --name resource-graph
+    # Run help for graph query options
+    $ az graph query --help
+    # Run Azure Resource Graph query
+    $ az graph query -q 'Resources | project name, type | order by name asc | limit 5'
+    ```
+
+---
+
 ## Azure Traffic Manager
 
 Azure Traffic Manager is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness.
