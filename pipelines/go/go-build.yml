@@ -71,7 +71,7 @@ stages:
 
     ## Initialize Go Module
     - script: |
-        go mod init pos_api
+        go mod init my_project
       displayName: Initialize Go Module
       workingDirectory: '$(APP_ROOT)'
 
