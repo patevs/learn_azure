@@ -1,18 +1,14 @@
-# ------------------ #
-# basic-template.yml #
-# ------------------ #
-
+# basic-template.yml
 # This example runs three stages, one after another.
-# The middle stage runs two jobs in parallel.
 
 stages:
-
 - stage: Build
   jobs:
   - job: BuildJob
     steps:
     - script: echo Building!
 
+# The `Test` stage runs two `job`s in parallel.
 - stage: Test
   jobs:
   - job: TestOnWindows
