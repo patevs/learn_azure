@@ -10,13 +10,12 @@
     },
     "scripts": {
         "updates": "npx ncu",
-        "release": "np"
+        "release": "npx np"
     },
     "devDependencies": {
         "@commitlint/cli": "^12.1.1",
         "commitlint-config-gitmoji": "^2.2.3",
-        "husky": "^4.3.6",
-        "np": "^7.5.0"
+        "husky": "^4.3.6"
     },
     "commitlint": {
         "extends": [
