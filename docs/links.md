@@ -195,6 +195,15 @@ Azure Resource Graph is a service in Azure that is designed to extend Azure Reso
 
 ---
 
+## Azure Synapse Analytics
+
+Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of **SQL** technologies used in enterprise data warehousing, **Spark** technologies used for big data, **Pipelines** for data integration and ETL/ELT, and deep integration with other Azure services such as **Power BI**, **CosmosDB**, and **AzureML**.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/synapse-analytics/overview-what-is)
+* [Documentation](https://docs.microsoft.com/en-us/azure/synapse-analytics/)
+
+---
+
 ## Azure Traffic Manager
 
 Azure Traffic Manager is a DNS-based traffic load balancer that enables you to distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness.
