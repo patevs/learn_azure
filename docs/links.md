@@ -107,6 +107,16 @@ Azure Database for MySQL is a relational database service powered by the MySQL c
 
 ---
 
+## Azure Databricks
+
+Azure Databricks is a data analytics platform optimized for the Microsoft Azure cloud services platform. Azure Databricks offers two environments for developing data intensive applications: Azure Databricks SQL Analytics and Azure Databricks Workspace.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks)
+* [Azure Databricks SQL Analytics](https://docs.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks-sqla)
+* [Azure Databricks Workspace](https://docs.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks-ws)
+
+---
+
 ## Azure Front Door
 
 Azure Front Door is a global, scalable entry-point that uses the Microsoft global edge network to create fast, secure, and widely scalable web applications.
