@@ -57,6 +57,14 @@ Azure Blob storage is Microsoft's object storage solution for the cloud. Blob st
 * [Documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/)
 * [CLI Samples](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-samples-blobs-cli)
 
+### Azure Data Lake Storage
+
+‎Azure Data Lake Storage Gen2 is a set of capabilities dedicated to big data analytics, built on [Azure Blob storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction).
+
+Data Lake Storage Gen2 converges the capabilities of [Azure Data Lake Storage Gen1](https://docs.microsoft.com/en-us/azure/data-lake-store/) with Azure Blob storage. For example, Data Lake Storage Gen2 provides file system semantics, file-level security, and scale. Because these capabilities are built on Blob storage, you'll also get low-cost, tiered storage, with high availability/disaster recovery capabilities.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
+
 ---
 
 ## Azure CDN
