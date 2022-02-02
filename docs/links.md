@@ -195,6 +195,23 @@ Azure Resource Graph is a service in Azure that is designed to extend Azure Reso
 
 ---
 
+## Azure Resource Manager
+
+Azure Resource Manager is the deployment and management service for Azure. It provides a management layer that enables you to create, update, and delete resources in your Azure account. You use management features, like access control, locks, and tags, to secure and organize your resources after deployment.
+
+* [Overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
+* [Documentation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
+
+### Consistent Management Layer
+
+When a user sends a request from any of the Azure tools, APIs, or SDKs, Resource Manager receives the request. It authenticates and authorizes the request. Resource Manager sends the request to the Azure service, which takes the requested action. Because all requests are handled through the same API, you see consistent results and capabilities in all the different tools.
+
+The following image shows the role Azure Resource Manager plays in handling Azure requests.
+
+![Consistent Management Layer](../media/azure-resource-manager.png)
+
+---
+
 ## Azure Synapse Analytics
 
 Azure Synapse is an enterprise analytics service that accelerates time to insight across data warehouses and big data systems. Azure Synapse brings together the best of **SQL** technologies used in enterprise data warehousing, **Spark** technologies used for big data, **Pipelines** for data integration and ETL/ELT, and deep integration with other Azure services such as **Power BI**, **CosmosDB**, and **AzureML**.
