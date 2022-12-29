@@ -1,21 +1,21 @@
 {
-    "name": "learn_azure",
-    "version": "0.19.0",
-    "description": "Links, resources, and code related to my learning of Azure cloud services",
-    "author": "PatEvs",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/patevs/learn_azure.git"
-    },
-    "scripts": {
-        "prepare": "husky install",
-        "updates": "npx ncu",
-        "release": "npx np"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^17.3.0",
-        "commitlint-config-gitmoji": "^2.2.6",
-        "husky": "^8.0.2"
-    }
+  "name": "learn_azure",
+  "version": "0.19.0",
+  "description": "Links, resources, and code related to my learning of Azure cloud services",
+  "author": "PatEvs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patevs/learn_azure.git"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "updates": "npx ncu",
+    "release": "npx np"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "commitlint-config-gitmoji": "^2.2.6",
+    "husky": "^8.0.2"
+  }
 }
